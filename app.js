@@ -7,8 +7,9 @@ const cors = require('cors');
 
 mongoose.connect('mongodb://127.0.0.1:27017/aneco_academy').then(()=>{
     console.log("connected");
-}).catch(()=>{
+}).catch((err)=>{
     console.log("connection failed");
+    console.log(err);
 })
 
 app.use(express.json());
